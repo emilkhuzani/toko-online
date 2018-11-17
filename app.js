@@ -9,6 +9,10 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname,'public')));
 
+//setup index
+app.get('/', function(req,res){
+  res.send("mamamia lezatos mengapa");
+});
 //setup server
 var port = 3000;
 app.listen(port,function(err){
